@@ -1,0 +1,32 @@
+* `for`: el ciclo for es un bucle que se repite despues de establecer unas condiciones que se dividen en tres partes. 
+La primera parte usualmente es crear una variable y darle un valor. 
+la segunda parte es una condición que puede tener un resultado verdadero o falso.
+y la tercera es la acción que realizará el ciclo mientras la condición se cumpla y se detiene cuando el resultado sea diferente a lo dicho. 
+ejemplo: for (x=12; x<16; x++) {'x es un adolescente.'}
+en la primera parte se crea la variable "x" y se le da un valor de 12, 
+la segunda parte es la condición que dice que si "x" es menor a 16.
+y en la tercera parte dice que mientras "x" sea menor a 16 "x" va a aumentar en 1.
+como "x" es igual a 12 entonces la condicion de "x" menor que 16 es cierta y por tanto "x" suma 1 es decir 12+1
+para el siguiente ciclo "x" vale 13 (porque 12+1) como "x" todavía es menor a 16 a "x" se le suma otro 1, 13+1
+Esto se va a repetir hasta que "x" sea igual a 16 porque entonces ya no se cumple la condición.
+
+* `&&`: este es un operador logico que significa "y" o "and" en inglés y se utiliza si queremos que dos o más condiciones diferentes se tengan en cuenta dentro de un mismo ciclo. 
+por ejemplo if (X>=12) { 'x es un adolescente.';}. Aquí le estamos diciendo al lenguaje que si la variable "X" es mayor o igual a 12 hará una acción, pero si qusieramos que se cumpliera más de una condición usamos "&&"-
+if (X>=12 && x<= 16) { 'x es un adolescente.';} 
+aqui estamos diciendo que si "x" es igual a 12 y a 13 y a 14 y a 15 y a 16 entonces X es un adolescente.
+la condicion solo se va a cumplir si entran esos números sino hará otra acción.
+puedes poner más de un "&&" lo importante es que tenga coherencia por ejemplo.
+if (x===12 & x==16) {'x es un adolescente.'} no se va a ejecutar porque X no puede ser 12 y 16 al tiempo. 
+
+`||`: este significa "ó" y tambien se utiliza en condicionales como el "&&", usando el mismo ejemplo diriamos
+que las condiciones se cumplen si la variable cumplen el caso 1 o el caso 2 . 
+if (X === 12 || x=== 16){'x es un adolescente.';} aquí si se ejecutaría el código porque si "X" toma el valor de 12 'x es un adolescente.'
+o si toma el valor de 16 'x es un adolescente.'
+
+`!`: este operador logico significa NO y se usa para que la condición se ejecute al contrario de lo enunciado tambien
+se junta con el "=" para crear el operador logico 'diferente'. 
+if (x!='rojo'){ 'es otro color';} acá decimos que si X es diferente del escrito 'rojo' entonces es un color diferente.
+ahora esa expresión podría ser distinta e igual de verdadera.
+if (!x=='rojo') { 'es otro color';} aquí diria si x no es 'rojo' entonces 'es otro color'.
+si pusieramos if (!('rojo'==='rojo')){'es rojo'} no se ejecutaría porque está diciendo lo contrario de la expresión. 
+'rojo' no es igual a 'rojo'.

@@ -1,0 +1,18 @@
+Objeto: es un contenedor que puede guardar información mucha información sobre un mismo tema. por ejemplo puede ser el objeto estudiante y dentro de el tener propiedades como nombre, edad, sexo, etc.
+los objetos se representan con llaves {}
+Propiedades: son los elementos que hacen parte del objeto y que se describen así mismos dentro de este según la intención del programa.
+las propiedades se definen con dos puntos en vez del signo igual así -> nombre: 'Isac',
+Metodos: los metodos dentro de un objeto son básicamente una función que podría tomarse como una acción que realiza el objeto.
+bucle for in: es un bucle que se puede utilizar principalmente con los objetos ya que el bucle for de siempre no serviría de la misma manera ya que los objetos no tienen un indice.
+El bucle for in recorre todo las propiedades del objeto y termina cuando llega al ultimo de ellos. 
+ejemplo for (let clave in estudiante){ return clave; return estudiante[clave]} podemos ver que en este ejercicio la palabra clave hace las veces de la variable i en un bucle for normal
+Notación de puntos: cuando se quiere interactuar la propiedad de un objeto utilizamos la notación de punto para hacer que sea mucho más rapido.
+por ejemplo si quisiera acceder a la propiedad nombre del objeto estudiante usaría:
+estudiante.nombre;
+para tambien podemos crear un objeto y asignarle un valor:
+estudiante. nombre = 'Isac';
+La notación de corchete hace la misma función pero tiene la caracteristica de que permite diferenciar una propiedad de una variable.
+por ejemplo.
+estudiante[nombre] = 'Isac'; este es para definir o llamar una propiedad. 
+pero este:
+estudiante["nombre"] = 'Isac'; se usa para llamar o definir una variable. 

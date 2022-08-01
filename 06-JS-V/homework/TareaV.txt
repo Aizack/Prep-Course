@@ -1,0 +1,55 @@
+* `prototype`: es el objeto que almacena el nuevo conjunto de objeto que estás creando y que este a su vez 
+proviene del objeto prototipo principal llamado object.prototype por eso todas las clases que creamos 
+son prototipos hijos de este metodo principal (object.prototype)
+En otras palabras, si al crear una clase con todas sus propiedades, es decir objetos, propiedades y métodos 
+el mismo sistema por defecto le asigna un prototipo que es una especie de plantilla de la cual puedes hacer uso
+cuando lo necesites.
+Esto se hace para ahorrar recursos y tiempo.
+imaginate que tienes que crear muchos objetos con el mismo grupo de propiedades y metodos,
+en vez de crear una clase para cada objeto lo que haces es llamar
+a un prototipo de clases que ya tenga todas las caracteristicas necesitadas. 
+Ejemplo:
+necesitas crear un objeto juan, sebas, sandra, maria y cada una debe tener nombre, apellido, dirección. 
+hay entonces una clase existente llamada persona que tiene esta misma información así que la usas. 
+//la clase seria así:
+function Persona(nombre, apellido, direccion){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.direccion = direccion;
+}
+//ahora le agregamos un método saludo a la clase.
+Persona.prototype.saludo = function(){
+    console.log('hola soy '+ this.nombre, this.apellido+' y vivo en la dirección '+ this.direccion);
+} // de esta forma el método se agrega directamente a la clase sin necesidad de tener que escribir toda la clase de nuevo.
+//luego creas el objeto
+var juan = new Persona('juan', 'castillo', 'calle walabi 1234');
+//y puedes llamar el metodo saludo
+juan.saludo(); 
+//hola soy juan castillo y vivo en la dirección calle walabi 1234
+//así sin tener que crear una clase para sebas o para sandra puedes agregar más info.
+//por ejemplo:
+var sandra = new Persona('Sandra','Diaz','Cra falsa 123');
+sandra.saludo();
+//hola soy Sandra Diaz y vivo en la dirección Cra falsa 123 
+
+* _Constructors_ (de Clases): este es el que permite asignarle los valores a la clase y viene por defecto
+dentro de los prototipos en la funsión clásica de Java Script.
+Ahora a partir del ES6 se declara dentro de la clase de la siguiente manera. 
+class Persona {
+    constructor (nombre, apellido, direccion){ 
+        this.nombre = nombre,
+        this.apellido = apellido,
+        this.direccion = direccion //se puede observar que no se separa por ';' pero si por ',' y la razón es porque
+                                   // constructor asigna los valores de la clase siendo un objeto.
+    } // los metodos vienen fuera del constructor
+    saludo(){
+        console.log('hola soy '+ this.nombre, this.apellido+' y vivo en la dirección '+ this.direccion);
+    }
+}
+var sebas = new Persona('Sebas','Rodriguez','call roja 123');
+sebas.saludo();
+//hola soy Sebas Rodriguez y vivo en la dirección call roja 123
+
+var maria = new Persona('Maria', 'Fernandez', 'calle azul 123');
+maria.saludo();
+//hola soy Maria Fernandez y vivo en la dirección calle azul 123

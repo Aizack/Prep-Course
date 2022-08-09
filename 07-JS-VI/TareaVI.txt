@@ -1,0 +1,9 @@
+Funciones Callback: las funciones callback son funciones que son declaradas dentro de otra función. 
+por ejemplo. 
+function Hola(persona){
+return 'hola'+persona'!';
+}
+function saludar(persona, cb){
+    cb(persona);
+}
+saludar('pablo', Hola)
